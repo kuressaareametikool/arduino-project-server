@@ -32,7 +32,7 @@ sudo npm install -g nodemon
 ```
 6. Clone the repository
 ```
-git clone https://github.com/kuressaareametikool/arduino-project
+git clone https://github.com/kuressaareametikool/arduino-project-server.git
 ```
 7. Change directory to project folder
 ```

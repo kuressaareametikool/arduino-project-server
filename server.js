@@ -2,8 +2,13 @@ const express = require('express');
 const app = express();
 
 const http = require('http').createServer(app);
-const socketio = require('socket.io');
-const io = socketio(http)
+
+const io = require("socket.io")(http, {
+    cors: {
+      origin: "*",
+      methods: ["GET", "POST"]
+    }
+  });
 
 const port = 8000;
 
@@ -17,10 +22,10 @@ app.get("/", (req, res) => {
 
 // Listen socket.io connections from client side
 io.on('connection', (socket) => {
-    // On chat message from user emit to all users who are connected
-    socket.on('send note', msg => {
-        console.log(msg);
-        io.emit('send note', { 'note': msg });
+    // On data from user emit to all users who are connected
+    socket.on('send-data', dataPackage => {
+        console.log(dataPackage);
+        io.emit('send-data', dataPackage ); // {key: value}
     });
 
     // On disconnect update user list

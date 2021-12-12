@@ -10,7 +10,7 @@ const io = require("socket.io")(http, {
     }
   });
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 // config
 app.use('/public', express.static('./public/'));

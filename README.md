@@ -46,3 +46,15 @@ npm install
 ```
 nodemon server.js
 ``` 
+
+--------------------------------
+
+### Access server from other devices on local network
+
+To access and test this server (or other WSL services) from a Wndows machine in **local network** i.e. same Wifi, you have to open the WSL ports of that machine. For that download and run the [WSLHostPatcher](https://github.com/CzBiX/WSLHostPatcher/releases).
+
+Then find machines Wireless LAN adapter Wi/Fi IPv4 Address. For that run ```ipconfig```. 
+
+Now, from your **client** connect to that IP ```const socket = io("http://xx.xx.xxx.xxx:8000");```
+
+

@@ -32,7 +32,7 @@ sudo npm install -g nodemon
 ```
 6. Clone the repository
 ```
-https://github.com/kuressaareametikool/virtual-instrument-server.git
+git clone https://github.com/kuressaareametikool/virtual-instrument-server.git
 ```
 7. Change directory to project folder
 ```

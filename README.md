@@ -36,7 +36,7 @@ git clone https://github.com/kuressaareametikool/virtual-instrument-server.git
 ```
 7. Change directory to project folder
 ```
-cd arduino-project
+cd virtual-instrument-server
 ```
 8. Install modules
 ```
